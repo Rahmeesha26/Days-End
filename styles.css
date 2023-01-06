@@ -1,0 +1,25 @@
+    h1 {
+    color: rgb(211, 9, 43);
+    text-align: center;
+    padding-top: 50px;
+    font-size: xx-large;
+    font-family: 'Viga', sans-serif;
+
+}
+
+button {
+    margin: 20px 0px 0px 300px;
+    width: 60px;
+}
+
+.gg {
+    background-color: black;
+    color: white;
+    margin-top: 5px;
+}
+
+.start {
+    width: 1260px;
+    height: 820px;
+    margin-left: 6px;
+}

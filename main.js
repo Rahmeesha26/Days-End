@@ -1,20 +1,22 @@
 function drawImage() {
-    const canvas = document.getElementById('horror')
-    const ctx = document.getContext('2d');
+    const horror = document.getElementById('horror');
+    if (horror.getContext) {
+        const ctx = horror.getContext('2d');
+    }
+
     const img = new Image();
-    
-    ctx.drawImage(img, 0, 0, 50, 50);
+    ctx.drawImage(3, 3, 32, 32, 1, 1, 32, 32);
 }   
 
-function copyImageToCanvas() {
-    const img = document.querySelector('img');
-    const canvas = document.querySelector('canvas');
+// function copyImageToCanvas() {
+//     const img = document.querySelector('img');
+//     const canvas = document.querySelector('canvas');
 
-    const ctx = canvas.getContext('2d');
+//     const ctx = canvas.getContext('2d');
 
-    ctx.drawImage(img, 0, 0, 50, 20, 30, 30, 32, 32);
+//     ctx.drawImage(img, 3, 3, 32, 32, 1, 1, 32, 32);
 
-}
+// }
 
 
 // ctx.drawImage(img, 
