@@ -5,53 +5,29 @@ const textBubElement = document.getElementById('text-bub');
 //when game start text-bub div should say plotpoint.text
 const choicesElement = document.getElementById('choices');
 
+let setState =
+
 function startGame () {
-    this.toggleScreen('startScreen', false);
-    this.toggleScreen('canva', true);
-    this.prepareCanvas();
-    gameloop.start()
     document.getElementById('start').innerHTML = 'Start Game'
     showTextBubNode(1)
 }
 
-const startButton = document.getElementById('start-button');
-
-startButton.addEventListener('click', startGame);
-
 function startGame() {
-    // game.js
-const startButton = document.getElementById('start-button');
-const choiceButtons = document.querySelectorAll('.choice');
-const screens = document.querySelectorAll('.screen');
-
-startButton.addEventListener('click', startGame);
-
-function startGame() {
-  // hide start screen and show game screen
-  screens[0].style.display = 'none';
-  screens[1].style.display = 'block';
-}
-
-choiceButtons.forEach((button) => {
-  button.addEventListener('click', (event) => {
-    // do something based on the choice made
-  });
-});
 
 }
 
 function showTextBubNode(textBubNodeIndex) {
     const textBubNode = textBubNode.find(textBubNode => textBubNode.id === textBubNodeIndex)
     textBubElement.innerText = textBubNode.text
-    while (bottomLeftCornerButtonElement.first) {
-        bottomLeftCornerButtonElement.removeChild(bottomLeftCornerButtonElement.firstChild)
+    while (choicesElement.first) {
+        choicesElement.removeChild(choicesElement.firstChild)
     }
 
-    textBubNode.choices.array.forEach(choice => {
+    textBubNode.choices.forEach(choice => {
         if (showChoices(choice)) {
-            const button =document.createElement('button')
+            const button = document.createElement('button')
             button.innerText = choice.text
-            button.classList.add('choices')
+            button.classList.add('choice')
             button.addEventListener('click', () => selectChoices(choice))
             choicesButtonElement.appendChild(button)
         }
@@ -66,24 +42,27 @@ function selectChoices(choices) {
 
 }
 
-const textBubNode = {
-    character: {
-        story: "You decide to take a walk to clear your head, then suddenly there is a car accident. People crowd around to see if anyone is alive. There is a scream",
-        choices: [
+const textBubNode = [
+    {
+        id: 1,
+        textbub: "You decide to take a walk to clear your head, then suddenly there is a car accident. People crowd around to see if anyone is alive. There is a scream",
+        choice: [
             {
-                choice: "Run to save yourself!",
+                textbub: "Run to save yourself!",
                 nextText: 2
             },
             {
-                choice: "Go back home!",
+                textbub: "Go back home!",
                 nextText: 2
             }
         ]
     },
-    character: {
-        story: ""
+    {
+        id: 2, 
+        textbub: "",
+        choice: "",
     }
-}
+]
 
 startGame()
 
