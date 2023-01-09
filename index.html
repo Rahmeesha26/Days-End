@@ -7,15 +7,21 @@
         <script type="text/javascript" src="main.js" async></script>
     </head>
     <body>
-        <h1>Days End</h1>
-        <div class="container">
-            <div class="top-left"><button class="restart">restart</button></div>            
-            <div></div>
-            <div class="text-bub"><p>This story starts in good old smyrna, Georgia. aside from driving or taling public  </p></div>
-            <div class="bottom-left-choices"><p></p></div>
-            <div class="bottom-right-choices"><p></p></div>
-            <div><img src="patrick-perkins-DP4dLbZdybA-unsplash.jpg" width="670" height="450"/></div>
+        <div id="game-container"> 
+            <div class="screen" id="start-screen">
+                <h1>Days End</h1>
+                <button id="start-button">Start Game</button>
+            </div>
+            <div id="game-screen" class="screen">
+                <div id="text-bub">
+                    <p>GAME SCREEN!!!</p>
+                </div>
+            </div>
+            <div id="choices" class="btn-grid">
+                <button class="choice" id="choice-1">choice-1</button>
+                <button class="choice" id="choice-2">choice-2</button>
+            </div>
         </div>
-        <button class="low-center">start</button>
+            <img src="patrick-perkins-DP4dLbZdybA-unsplash.jpg" width="800" height="800" />
     </body>
 </html>
